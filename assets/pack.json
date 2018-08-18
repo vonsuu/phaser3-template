@@ -1,0 +1,193 @@
+{ 
+    "Preload": {
+        "files": [
+            {
+                "type": "atlas",
+                "key": "atlas",
+                "textureURL": "assets/atlas.png",
+                "atlasURL": "assets/atlas.json"
+            },
+            {
+                "type": "xml",
+                "key": "minecraftXML",
+                "url": "assets/minecraft.fnt"
+            },
+            {
+                "type": "image",
+                "key": "tiles",
+                "url": "assets/tiles/tiles.png"
+            },
+            {
+                "type": "audio",
+                "key": "fanfareSFX",
+                "url": "assets/sfx/sfx_sounds_fanfare3.wav"
+            },
+            {
+                "type": "audio",
+                "key": "coinSFX",
+                "url": "assets/sfx/sfx_coin_double2.wav"
+            },
+            {
+                "type": "audio",
+                "key": "meatSFX",
+                "url": "assets/sfx/sfx_sounds_interaction1.wav"
+            },
+            {
+                "type": "audio",
+                "key": "potionSFX",
+                "url": "assets/sfx/sfx_sounds_interaction12.wav"
+            },
+            {
+                "type": "audio",
+                "key": "jugSFX",
+                "url": "assets/sfx/sfx_sounds_powerup2.wav"
+            },
+            {
+                "type": "audio",
+                "key": "heartSFX",
+                "url": "assets/sfx/sfx_sounds_powerup6.wav"
+            },
+            {
+                "type": "audio",
+                "key": "itemDropSFX",
+                "url": "assets/sfx/sfx_sounds_interaction14.wav"
+            },
+            {
+                "type": "audio",
+                "key": "enemyDeathSFX",
+                "url": "assets/sfx/sfx_deathscream_alien3.wav"
+            },
+            {
+                "type": "audio",
+                "key": "demonDeathSFX",
+                "url": "assets/sfx/sfx_deathscream_alien1.wav"
+            },
+            {
+                "type": "audio",
+                "key": "slimeDeathSFX",
+                "url": "assets/sfx/sfx_deathscream_alien6.wav"
+            },
+            {
+                "type": "audio",
+                "key": "enemyExclaim",
+                "url": "assets/sfx/sfx_sounds_high2.wav"
+            },
+            {
+                "type": "audio",
+                "key": "demonExclaim",
+                "url": "assets/sfx/sfx_alarm_loop8.wav"
+            },
+            {
+                "type": "audio",
+                "key": "playerDamageSFX",
+                "url": "assets/sfx/sfx_sounds_damage1.wav"
+            },
+            {
+                "type": "audio",
+                "key": "playerDeathSFX",
+                "url": "assets/sfx/sfx_deathscream_human3.wav"
+            },
+            {
+                "type": "audio",
+                "key": "lowHealthSFX",
+                "url": "assets/sfx/sfx_lowhealth_alarmloop7.wav"
+            },
+            {
+                "type": "audio",
+                "key": "fireballSFX",
+                "url": "assets/sfx/sfx_wpn_laser9.wav"
+            },
+            {
+                "type": "audio",
+                "key": "outOfMagicSFX",
+                "url": "assets/sfx/sfx_sounds_error10.wav"
+            },
+            {
+                "type": "audio",
+                "key": "fireballWallSFX",
+                "url": "assets/sfx/sfx_exp_short_soft11.wav"
+            },
+            {
+                "type": "audio",
+                "key": "fireballEnemySFX",
+                "url": "assets/sfx/sfx_exp_short_hard14.wav"
+            },
+            {
+                "type": "tilemapTiledJSON",
+                "key": "Level1Map",
+                "url": "assets/maps/level1.json"
+            },
+            {
+                "type": "audio",
+                "key": "Level1Music",
+                "url": "assets/music/14-BarbarianKing.mp3"
+            },
+            {
+                "type": "tilemapTiledJSON",
+                "key": "Level2Map",
+                "url": "assets/maps/level2.json"
+            },
+            {
+                "type": "audio",
+                "key": "Level2Music",
+                "url": "assets/music/15-Dungeon.mp3"
+            },
+              {
+                "type": "tilemapTiledJSON",
+                "key": "Level3Map",
+                "url": "assets/maps/level3.json"
+            },
+            {
+                "type": "audio",
+                "key": "Level3Music",
+                "url": "assets/music/06-RebelsBe.mp3"
+            },
+            {
+                "type": "tilemapTiledJSON",
+                "key": "Level4Map",
+                "url": "assets/maps/level4.json"
+            },
+            {
+                "type": "audio",
+                "key": "Level4Music",
+                "url": "assets/music/03-Whydothenationsrage.mp3"
+            },
+            {
+                "type": "tilemapTiledJSON",
+                "key": "Level5Map",
+                "url": "assets/maps/level5.json"
+            },
+            {
+                "type": "tilemapTiledJSON",
+                "key": "Level69Map",
+                "url": "assets/maps/level69.json"
+            },
+            {
+                "type": "audio",
+                "key": "Level69Music",
+                "url": "assets/music/06-RebelsBe.mp3"
+            },
+            {
+                "type": "audio",
+                "key": "Level5Music",
+                "url": "assets/music/13Danger.mp3"
+            },
+            {
+                "type": "audio",
+                "key": "overMusic",
+                "url": "assets/music/20-GameOver.mp3"
+            },
+            {
+                "type": "audio",
+                "key": "winMusic",
+                "url": "assets/music/25-Finale.mp3"
+            }
+
+        ]
+    },
+    "meta": {
+        "game": "Phaser3 Tilemap Asset-pack Example",
+        "author": "B3L7",
+        "URL": "https://github.com/B3L7/phaser3-tilemap-pack"
+    }
+}
