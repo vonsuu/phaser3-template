@@ -8,6 +8,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
     this.scene = config.scene;
     this.body.setDrag(8, 8);
     this.body.setBounce(.5, .5);
+    this.direction = 1;
     this.alive = true;
     this.damaged = false;
     this.input = this.scene.input.keyboard.createCursorKeys();
@@ -47,7 +48,22 @@ export default class Player extends Phaser.GameObjects.Sprite {
       }
     }, this);
 
-
+    this.scene.input.keyboard.on('keydown_Q', function (pointer) {
+      let magic = this.scene.registry.get('magic_current');
+      if (magic > 0) {
+        let fireball = new Fireball({
+          scene: this.scene,
+          x: this.x, 
+          y: this.y,
+          direction: this.direction
+        });
+        this.scene.playerAttack.add(fireball);
+        this.scene.registry.set('magic_current', magic - 1);
+        this.scene.events.emit('magicChange'); //tell the scene the magic has changed so the HUD is updated
+      } else {
+        this.noMagicSound.play();
+      }
+    }, this);
     this.scene.add.existing(this);
   }
 
@@ -71,19 +87,55 @@ export default class Player extends Phaser.GameObjects.Sprite {
 
       if (this.input.left.isDown)
       {
+          if (this.input.up.isDown) {
+            this.direction = 7;
+          }
+          else if (this.input.down.isDown) {
+            this.direction = 5;
+          }
+          else {
+            this.direction = 6;
+          }
           this.body.setVelocityX(-64);
       }
       else if (this.input.right.isDown)
       {
+          if (this.input.up.isDown) {
+            this.direction = 1;
+          }
+          else if (this.input.down.isDown) {
+            this.direction = 3;
+          }
+          else {
+            this.direction = 2;
+          }
           this.body.setVelocityX(64);
       }
 
       if (this.input.up.isDown)
       {
+          if (this.input.left.isDown) {
+            this.direction = 7;
+          }
+          else if (this.input.right.isDown) {
+            this.direction = 1;
+          }
+          else {
+            this.direction = 0;
+          }
           this.body.setVelocityY(-64);
       }
       else if (this.input.down.isDown)
       {
+          if (this.input.left.isDown) {
+            this.direction = 5;
+          }
+          else if (this.input.right.isDown) {
+            this.direction = 3;
+          }
+          else {
+            this.direction = 4;
+          }
           this.body.setVelocityY(64);
       }
 
