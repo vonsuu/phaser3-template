@@ -8,6 +8,9 @@ import Potion from '../sprites/potion';
 import Jug from '../sprites/jug';
 import Heart from '../sprites/heart';
 
+
+import WorldGenerator from '../generators/WorldGenerator'
+
 export default class Level extends Phaser.Scene {
   constructor() 
   {
@@ -19,7 +22,7 @@ export default class Level extends Phaser.Scene {
   create() 
   {
     this.loadMusic();
-    this.loadTiledMap();
+    this.createTiledMap();
     this.createGameObjectsGroups();
     this.convertToGameObjects();
     this.createPlayer();
@@ -85,10 +88,9 @@ export default class Level extends Phaser.Scene {
   /**
    * Load map based on registry value, set physics bounds, and create layer
    */
-  loadTiledMap() {
-    //point the variable at the registry which is assigned either at the Preload scene or just prior to level restart
-    let load = this.registry.get('load');
-    this.map = this.make.tilemap({ key: `${load}Map` });
+  createTiledMap() {
+    let generator = new WorldGenerator(this);
+    this.map = generator.generateMap();
     this.physics.world.bounds.width = this.map.widthInPixels;
     this.physics.world.bounds.height = this.map.heightInPixels;
     this.tileset = this.map.addTilesetImage('tiles');
@@ -267,13 +269,13 @@ export default class Level extends Phaser.Scene {
         }
         if (object.type === "slime") {
           //check the registry to see if the slime has already been killed. If not create the slime in the level and register it with the game
-          regName = `${level}_Slime_${slimeNum}`;
+          regName = `${level}_Slime_${this.slimeNum}`;
           if (this.registry.get(regName) !== 'dead') {
             let slime = new Slime({
             scene: this,
             x: object.x + 8, 
             y: object.y - 8,
-            number: slimeNum
+            number: this.slimeNum
             });
             this.enemies.add(slime);
             this.registry.set(regName, 'active');
@@ -446,5 +448,4 @@ export default class Level extends Phaser.Scene {
       this.time.addEvent({ delay: 1000, callback: () => {this.scene.start('GameOver', 'win');}, callbackScope: this });
     }
   }
-
 }

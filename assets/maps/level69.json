@@ -30,6 +30,54 @@
                  "y":80
                 }, 
                 {
+                 "gid":91,
+                 "height":16,
+                 "id":2,
+                 "name":"",
+                 "rotation":0,
+                 "type":"enemy",
+                 "visible":true,
+                 "width":16,
+                 "x":304,
+                 "y":512
+                }, 
+                {
+                 "gid":91,
+                 "height":16,
+                 "id":3,
+                 "name":"",
+                 "rotation":0,
+                 "type":"enemy",
+                 "visible":true,
+                 "width":16,
+                 "x":416,
+                 "y":512
+                }, 
+                {
+                 "gid":92,
+                 "height":16,
+                 "id":4,
+                 "name":"spawnDown",
+                 "rotation":0,
+                 "type":"spawn",
+                 "visible":true,
+                 "width":16,
+                 "x":352,
+                 "y":608
+                }, 
+                {
+                 "gid":93,
+                 "height":16,
+                 "id":5,
+                 "name":"",
+                 "rotation":0,
+                 "type":"coins",
+                 "visible":true,
+                 "width":16,
+                 "x":416,
+                 "y":384
+                }, 
+                {
                  "gid":93,
                  "height":16,
                  "id":19,
@@ -100,6 +148,18 @@
                  "width":16,
                  "x":480,
                  "y":176
+                }, 
+                {
+                 "gid":93,
+                 "height":16,
+                 "id":33,
+                 "name":"",
+                 "rotation":0,
+                 "type":"coins",
+                 "visible":true,
+                 "width":16,
+                 "x":352,
+                 "y":544
                 }],
          "opacity":1,
          "type":"objectgroup",

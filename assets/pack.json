@@ -160,7 +160,7 @@
             {
                 "type": "tilemapTiledJSON",
                 "key": "Level69Map",
-                "url": "assets/maps/level69.json"
+                "url": "assets/maps/level20.json"
             },
             {
                 "type": "audio",
