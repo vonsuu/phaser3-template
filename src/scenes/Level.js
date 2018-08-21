@@ -89,7 +89,7 @@ export default class Level extends Phaser.Scene {
    * Load map based on registry value, set physics bounds, and create layer
    */
   createTiledMap() {
-    let generator = new WorldGenerator(this);
+    const generator = new WorldGenerator(this);
     this.map = generator.generateMap();
     this.physics.world.bounds.width = this.map.widthInPixels;
     this.physics.world.bounds.height = this.map.heightInPixels;
